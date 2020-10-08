@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane prefHeight="882.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="example.controller.DeviceListController">
+    <items>
+        <VBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="1298.0" VBox.vgrow="NEVER">
+                <children>
+                    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="52.0" prefHeight="39.0" prefWidth="71.0" text="设备IP" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS">
+                        <font>
+                            <Font size="16.0" />
+                        </font>
+                    </Label>
+                    <TextField prefHeight="39.0" prefWidth="211.0" />
+                </children>
+            </HBox>
+            <HBox prefHeight="614.0" prefWidth="1226.0" VBox.vgrow="ALWAYS">
+                <children>
+                    <TableView fx:id="deviceTable" layoutY="7.0" maxWidth="Infinity" prefHeight="560.0" prefWidth="1226.0" tableMenuButtonVisible="true" HBox.hgrow="ALWAYS">
+                        <columns>
+                            <TableColumn fx:id="colDeviceId" prefWidth="75.0" text="id" />
+                            <TableColumn fx:id="colLabName" prefWidth="50.0" text="实验室" />
+                            <TableColumn fx:id="colDeviceIp" prefWidth="100.0" text="ip" />
+                            <TableColumn fx:id="colDeviceAlias" prefWidth="75.0" text="别名" />
+                            <TableColumn fx:id="colDeviceType" prefWidth="75.0" text="形态" />
+                            <TableColumn fx:id="colDeviceLoginName" prefWidth="75.0" text="登录用户名" />
+                            <TableColumn fx:id="colDeviceLoginPassword" prefWidth="75.0" text="登录密码" />
+                            <TableColumn fx:id="colDeviceHardwareInfo" prefWidth="75.0" text="硬件信息" />
+                            <TableColumn fx:id="colUserName" prefWidth="75.0" text="使用者" />
+                            <TableColumn fx:id="colUserIps" prefWidth="75.0" text="使用者ip" />
+                            <TableColumn fx:id="colEstimateReleaseTime" prefWidth="75.0" text="预计释放时间" />
+                            <TableColumn fx:id="colCreateTime" prefWidth="75.0" text="设备创建时间" />
+                            <TableColumn fx:id="colOperation" prefWidth="75.0" text="操作" />
+                        </columns>
+                        <columnResizePolicy>
+                            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                        </columnResizePolicy>
+                    </TableView>
+                </children>
+            </HBox>
+        </VBox>
+    </items>
+</SplitPane>

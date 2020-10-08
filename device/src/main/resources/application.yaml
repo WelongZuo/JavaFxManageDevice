@@ -1,0 +1,18 @@
+spring:
+    datasource:
+        url: jdbc:mysql://localhost:3306/managedevice
+        username: root
+        password: root
+        driver-class-name: com.mysql.jdbc.Driver
+#        type: com.alibaba.druid.pool.DruidDataSource
+    jmx: 
+        enabled: false
+
+javafx:
+    title: MyCoolApp
+
+mybatis:
+    mapper-locations: classpath*:example/mapper/*.xml
+    configuration:
+        map-underscore-to-camel-case: true
+        log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
